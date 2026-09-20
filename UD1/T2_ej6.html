@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2_ej6</title>
+</head>
+<body>
+
+    <script>
+        // 1. Pedimos el número inicial mediante un prompt
+        let countdown = prompt("Introduce un número para iniciar la cuenta atrás");
+
+        // 2. Sustituimos el while por un bucle for
+        // Creamos una variable de control 'i' inicializada con el valor del prompt,
+        // establecemos la condición (i > 0) y el decremento (i--)
+        for (let i = countdown; i > 0; i--) {
+            alert(i + " ... ");
+        }
+    </script>
+
+</body>
+</html>

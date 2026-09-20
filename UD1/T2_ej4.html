@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2_ej4</title>
+</head>
+<body>
+
+    <script>
+        // Bucle for que recorre las horas desde las 9 hasta las 21
+        for (let hora = 9; hora <= 21; hora++) {
+            
+            // Variable booleana para indicar si es hora en punto o media hora
+            let esMediaHora = false;
+
+            // 1. Mostramos la hora en punto
+            document.write(hora + ":00<br>");
+
+            // 2. Mostramos la media hora (:30) siempre que:
+            // - No pasemos de las 21:30 (es decir, si la hora es menor a 21)
+            // - O si estamos exactamente en las 21:00 (para que imprima las 21:30 y termine ahí)
+            if (hora < 21) {
+                esMediaHora = true;
+                document.write(hora + ":30<br>");
+            } else if (hora === 21) {
+                // Caso especial para las 21:30 exactas
+                esMediaHora = true;
+                document.write("21:30<br>");
+            }
+        }
+    </script>
+
+</body>
+</html>

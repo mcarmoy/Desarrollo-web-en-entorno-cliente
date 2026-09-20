@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2_ej3</title>
+</head>
+<body>
+
+    <script>
+        // 1. Pedimos la edad al usuario mediante un prompt
+        let entradaEdad = prompt("Introduce tu edad:");
+
+        // 2. Convertimos el texto introducido a número entero
+        let edad = parseInt(entradaEdad);
+
+        // 3. Variable para almacenar el mensaje final
+        let mensaje = "";
+
+        // 4. Evaluamos los rangos de edad solicitados
+        if (edad > 18) {
+            mensaje = "absoluto";
+        } else if (edad >= 16 && edad <= 18) {
+            mensaje = "juvenil";
+        } else if (edad >= 14 && edad <= 15) {
+            mensaje = "cadete";
+        } else if (edad >= 12 && edad <= 13) {
+            mensaje = "infantil";
+        } else if (edad >= 10 && edad <= 11) {
+            mensaje = "alevín";
+        } else if (edad >= 8 && edad <= 9) {
+            mensaje = "benjamín";
+        } else {
+            // Mensaje para cuando se introduce un número menor de 8
+            mensaje = "Eres menor de 8 años (edad inferior al rango mínimo)";
+        }
+
+        // 5. Mostramos el resultado final mediante un alert
+        document.write(mensaje);
+    </script>
+
+</body>
+</html>

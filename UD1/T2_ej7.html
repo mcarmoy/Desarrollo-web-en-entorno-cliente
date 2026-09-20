@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2_ej7</title>
+</head>
+<body>
+
+    <script>
+        // 1. Variable para almacenar la respuesta del usuario (inicializada vacía o con prompt previo)
+        let respuesta = prompt("Control parental: Escribe el apellido del primer presidente español de la democracia:");
+
+        // 2. Bucle while que se repite mientras la respuesta NO sea correcta 
+        // (usamos .toLowerCase() para evitar problemas si el usuario escribe en minúsculas o mayúsculas)
+        while (respuesta === null || respuesta.toLowerCase() !== "suarez") {
+            respuesta = prompt("Incorrecto. Control parental activado. Vuelve a escribir el apellido del primer presidente:");
+        }
+
+        // 3. Una vez que acierta, el bucle termina y se muestra el contenido de la página
+        alert("¡Acceso concedido!");
+    </script>
+
+    <h1>Bienvenido a la página protegida</h1>
+    <p>Has superado el control parental correctamente.</p>
+
+</body>
+</html>

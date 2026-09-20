@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2_ej5</title>
+</head>
+<body>
+
+    <script>
+        // Pedimos un número mediante un prompt (por defecto se guarda como texto, 
+        // aunque JS hace conversión automática al compararlo con > 0)
+        let countdown = prompt("Introduce un número para iniciar la cuenta atrás");
+
+        // Bucle while que se ejecuta mientras countdown sea mayor que 0
+        while (countdown > 0) {
+            alert(countdown + " ... ");
+            
+            // Si dejamos countdown--; la cuenta baja de uno en uno hasta llegar a 0.
+            // Si lo cambiamos por countdown++; el número subirá indefinidamente (bucle infinito).
+            countdown--; 
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2_ej8</title>
+</head>
+<body>
+
+    <script>
+        // 1. Mensaje inicial para el prompt
+        let textoPrompt = "¿Cuál fue el primer presidente de la democracia española?";
+        let respuesta = prompt(textoPrompt);
+
+        // 2. Bucle while que se mantiene hasta que el usuario introduzca "adolfo suarez" (o variaciones)
+        while (respuesta === null || respuesta.toLowerCase().trim() !== "adolfo suarez") {
+            
+            // Convertimos la respuesta a minúsculas y quitamos espacios sobrantes para evaluar mejor
+            let valorLimpio = respuesta ? respuesta.toLowerCase().trim() : "";
+
+            // 3. Comprobamos los casos específicos según las pistas del enunciado
+            if (valorLimpio === "adolfo") {
+                // Si solo pone el nombre
+                textoPrompt = "Te falta el apellido. ¿Cuál fue el primer presidente de la democracia española?";
+            } else if (valorLimpio === "suarez" || valorLimpio === "suárez") {
+                // Si solo pone el apellido
+                textoPrompt = "Te falta el nombre. ¿Cuál fue el primer presidente de la democracia española?";
+            } else {
+                // Si introduce cualquier otra cosa totalmente errónea
+                textoPrompt = "ERROR. Inténtelo de nuevo. ¿Cuál fue el primer presidente de la democracia española?";
+            }
+
+            // Volvemos a mostrar el prompt con el mensaje adaptado al error cometido
+            respuesta = prompt(textoPrompt);
+        }
+
+        // 4. Si acierta el nombre y apellido completos, entra a la página
+        alert("¡Acceso concedido! Has introducido el nombre y apellido correctos.");
+    </script>
+
+    <h1>Bienvenido a la página protegida</h1>
+    <p>Control parental superado con éxito.</p>
+
+</body>
+</html>
