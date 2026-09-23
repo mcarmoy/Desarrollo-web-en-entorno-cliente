@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T1R2-ej8</title>
+</head>
+<body>
+    <script>
+        let ancho = parseInt(prompt('Introduce el ancho (y alto) de la celda en píxeles:'));
+
+        document.write('<table border="0" cellspacing="0">');
+
+        for (let f = 1; f <= 8; f++) {
+            document.write('<tr>');
+            for (let c = 1; c <= 8; c++) {
+                let color;
+                if ((f + c) % 2 === 0) {
+                    color = 'black';
+                } else {
+                    color = 'white';
+                }
+                document.write('<td width="' + ancho + '" height="' + ancho + '" bgcolor="' + color + '">&nbsp;</td>');
+            }
+            document.write('</tr>');
+        }
+
+        document.write('</table>');
+    </script>
+</body>
+</html>

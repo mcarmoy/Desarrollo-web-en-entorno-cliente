@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T1R2-ej2</title>
+</head>
+<body>
+    <script>
+        let columnas = parseInt(prompt('Introduce el número de columnas:'));
+        let alto = parseInt(prompt('Introduce la altura de las celdas (en píxeles):'));
+        let ancho = parseInt(prompt('Introduce la anchura de las celdas (en píxeles):'));
+
+        document.write('<table border="0" cellspacing="2" bgcolor="black">');
+        document.write('<tr bgcolor="white" height="' + alto + '">');
+
+        for (let i = 1; i <= columnas; i++) {
+            document.write('<td width="' + ancho + '">&nbsp;</td>');
+        }
+
+        document.write('</tr>');
+        document.write('</table>');
+    </script>
+</body>
+</html>

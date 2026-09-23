@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T1R2-ej5</title>
+</head>
+<body>
+    <script>
+        let numeroSecreto = prompt('Jugador 1: introduce el número a adivinar:');
+        let intento;
+        let acertado = false;
+
+        while (!acertado) {
+            intento = prompt('Jugador 2: introduce un número:');
+
+            if (intento == numeroSecreto) {
+                acertado = true;
+                alert('¡Correcto! Has acertado el número.');
+            } else if (intento > numeroSecreto) {
+                alert('Tu número es mayor que el número a adivinar.');
+            } else {
+                alert('Tu número es menor que el número a adivinar.');
+            }
+        }
+    </script>
+</body>
+</html>
