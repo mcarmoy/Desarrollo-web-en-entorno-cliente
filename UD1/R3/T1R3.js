@@ -1,4 +1,6 @@
-function ageCalculator(anioNacimiento, anioActual) {
+function ageCalculator(anioNacimiento) {
+    let anioActual = new Date().getFullYear();
+    
     let edadMax = anioActual - anioNacimiento;
     let edadMin = edadMax - 1;
 
