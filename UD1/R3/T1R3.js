@@ -1,6 +1,6 @@
 function ageCalculator(anioNacimiento) {
     let anioActual = new Date().getFullYear();
-    
+
     let edadMax = anioActual - anioNacimiento;
     let edadMin = edadMax - 1;
 
@@ -11,7 +11,7 @@ function supplyCalculator(edadActual, edadMaxima, cantidadPorDia) {
     let anosRestantes = edadMaxima - edadActual;
     let total = Math.round(anosRestantes * 365 * cantidadPorDia);
 
-    return "Necesitarás " + total + "kg hasta la edad de " + edadMaxima + ".";
+    return "Necesitarás " + total + " kg hasta la edad de " + edadMaxima + ".";
 }
 
 function circumference(radio) {

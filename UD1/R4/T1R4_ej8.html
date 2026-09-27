@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T1R4_ej8</title>
+</head>
+
+<body>
+    <script>
+        function rango(valor, rangoInf, rangoSup) {
+            return valor >= rangoInf && valor <= rangoSup;
+        }
+
+        let valor = parseFloat(prompt("Introduce el valor:"));
+        let rangoInf = parseFloat(prompt("Introduce el límite inferior:"));
+        let rangoSup = parseFloat(prompt("Introduce el límite superior:"));
+
+        document.write(valor + " está en el rango [" + rangoInf + ", " + rangoSup + "]: " + rango(valor, rangoInf, rangoSup));
+    </script>
+</body>
+
+</html>

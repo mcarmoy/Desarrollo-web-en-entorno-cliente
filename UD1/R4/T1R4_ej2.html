@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T1R4_ej2</title>
+</head>
+<body>
+    <script>
+        function addOnlyNums(...args) {
+            let total = 0;
+
+            for (let i = 0; i < args.length; i++) {
+                if (typeof args[i] === "number") {
+                total = total + args[i];
+                }
+            }
+
+            return total;
+            }
+
+            document.write(addOnlyNums(1, 'cat', 3, 4)); // 8
+    </script>
+</body>
+</html>

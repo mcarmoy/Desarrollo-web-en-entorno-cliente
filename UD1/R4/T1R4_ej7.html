@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T1R4_ej7</title>
+</head>
+
+<body>
+    <script>
+        function divisibleEntre(numero, divisor) {
+            return numero % divisor === 0;
+        }
+        let numero = parseInt(prompt("Introduce un número:"));
+        let divisor = parseInt(prompt("Introduce el divisor:"));
+
+        document.write(numero + " es divisible entre " + divisor + ": " + divisibleEntre(numero, divisor));
+    </script>
+</body>
+
+</html>

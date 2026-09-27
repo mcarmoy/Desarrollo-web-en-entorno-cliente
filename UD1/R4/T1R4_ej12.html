@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T1R4_ej12</title>
+</head>
+
+<body>
+    <script>
+        function precioFinal(precioOriginal, descuento) {
+            return precioOriginal - (precioOriginal * descuento / 100);
+        }
+
+        let precioOriginal = parseFloat(prompt("Introduce el precio original:"));
+        let descuento = parseFloat(prompt("Introduce el descuento (%):"));
+
+        document.write("El precio final es " + precioFinal(precioOriginal, descuento).toFixed(2));
+    </script>
+</body>
+
+</html>

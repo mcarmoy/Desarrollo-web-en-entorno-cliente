@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T1R4_ej5</title>
+</head>
+
+<body>
+    <script>
+        function sumEveryOther(...args) {
+            let total = 0;
+
+            for (let i = 0; i < args.length; i += 2) {
+                total = total + args[i];
+            }
+
+            return total;
+        }
+
+        document.write(sumEveryOther(5, 6, 3, 4, 1));
+        document.write("<br>");
+        document.write(sumEveryOther(10, 2, 11));
+    </script>
+</body>
+
+</html>

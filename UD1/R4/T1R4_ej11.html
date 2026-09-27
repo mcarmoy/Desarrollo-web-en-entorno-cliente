@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T1R4_ej11</title>
+</head>
+
+<body>
+    <script>
+        function imc(peso, altura) {
+            return peso / (altura * altura);
+        }
+
+        let peso = parseFloat(prompt("Introduce tu peso en kg:"));
+        let altura = parseFloat(prompt("Introduce tu altura en metros:"));
+
+        document.write("Tu IMC es " + imc(peso, altura).toFixed(2));
+    </script>
+</body>
+
+</html>
