@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T1R5_ej1</title>
+</head>
+
+<body>
+    <script>
+        function onlyUniques(...args) {
+            return [...new Set(args)];
+        }
+
+        console.log(onlyUniques('cat', 'cat', 'dog', 'pig'));
+        console.log(onlyUniques(1, 4, 7, 1, 2, 7, 4));
+
+        document.write(onlyUniques('cat', 'cat', 'dog', 'pig'));
+        document.write("<br>");
+        document.write(onlyUniques(1, 4, 7, 1, 2, 7, 4));
+    </script>
+</body>
+
+</html>
