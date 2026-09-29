@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T1R5_ej1</title>
+    <title>Ejercicio 6</title>
 </head>
-
 <body>
     <script>
-        function onlyUniques(...args) {
-            return [...new Set(args)];
+        let array = [];
+
+        function onlyUniques(...params) {
+            let array = [];
+
+            for (let index = 0; index < params.length; index++) {
+                if (!isEqual(params[index], array)) {
+                    array.push(params[index]);
+                }
+            }
+
+            return array;
         }
 
-        console.log(onlyUniques('cat', 'cat', 'dog', 'pig'));
-        console.log(onlyUniques(1, 4, 7, 1, 2, 7, 4));
+        function isEqual(n, array) {
+            for (let index = 0; index < array.length; index++) {
+                if (n === array[index]) {
+                    return true;
+                }
+            }
 
-        document.write(onlyUniques('cat', 'cat', 'dog', 'pig'));
-        document.write("<br>");
-        document.write(onlyUniques(1, 4, 7, 1, 2, 7, 4));
+            return false;
+        }
+        
+        array = onlyUniques(1,4,7,1,2,7,4,5,2,2,1,7,8);
+
+        for (let index = 0; index < array.length; index++) {
+            document.write(`Elemento ${index}: ${array[index]}<br>`);
+        }
     </script>
 </body>
-
 </html>
