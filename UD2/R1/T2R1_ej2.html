@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2R1_ej2</title>
+</head>
+
+<body>
+    <script>
+        const fecha = prompt("Escribe tu cumpleaños (YYYY-MM-DD):");
+        const partes = fecha.split("-");
+
+        const anio = parseInt(partes[0]);
+        const mes = parseInt(partes[1]) - 1;
+        const dia = parseInt(partes[2]);
+
+        for (let i = anio; i <= 2100; i++) {
+            const f = new Date(i, mes, dia);
+            if (f.getDay() === 0 && f.getMonth() === mes) {
+                document.write(i + "<br>");
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+
+</html>

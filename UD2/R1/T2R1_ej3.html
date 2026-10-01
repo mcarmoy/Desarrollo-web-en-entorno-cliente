@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T2R1_ej3</title>
+</head>
+<body>
+    <script>
+        const ahora = new Date();
+
+        let horas = ahora.getHours();
+        let minutos = ahora.getMinutes();
+        let segundos = ahora.getSeconds();
+
+        document.write("Son las " + horas + "h y " + minutos + "m<br>");
+
+        if (horas < 10) {
+            horas = "0" + horas;
+        }
+        if (minutos < 10) {
+            minutos = "0" + minutos;
+        }
+        if (segundos < 10) {
+            segundos = "0" + segundos;
+        }
+
+        document.write(horas + ":" + minutos + ":" + segundos);
+    </script>
+</body>
+</html>

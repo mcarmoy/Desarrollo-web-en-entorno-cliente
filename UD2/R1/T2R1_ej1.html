@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2R1_ej1</title>
+</head>
+<body>
+    <script>
+        let hoy = new Date();
+        let anioActual = new hoy.getFullYear();
+
+        let vacaciones = new Date(anioActual, 11, 19);
+
+        let diferenciaMs = vacaciones - hoy;
+        let diferenciaDias = Math.ceil(diferenciaMs / (1000 * 60 * 60 * 24));
+
+         document.write("Quedan " + diferenciaDias + " días para las vacaciones de Navidad.");
+    </script>
+</body>
+</html>

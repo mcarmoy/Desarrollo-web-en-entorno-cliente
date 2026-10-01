@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T2R1_ej6</title>
+</head>
+<body>
+    <script>
+        const completo = prompt("Escribe tu nombre y apellidos:");
+
+        console.log("Tamaño: " + completo.length);
+        console.log("Minúsculas: " + completo.toLowerCase());
+        console.log("Mayúsculas: " + completo.toUpperCase());
+
+        const partes = completo.split(" ");
+
+        console.log("Nombre: " + partes[0]);
+        console.log("Apellido 1: " + partes[1]);
+        console.log("Apellido 2: " + partes[2]);
+
+        // O DE ESTA MANERA 
+        /* 
+        const nombre = prompt("Escribe tu nombre:");
+        const apellido1 = prompt("Escribe tu primer apellido:");
+        const apellido2 = prompt("Escribe tu segundo apellido:");
+
+        const completo = nombre + " " + apellido1 + " " + apellido2;
+
+        console.log("Tamaño: " + completo.length);
+        console.log("Minúsculas: " + completo.toLowerCase());
+        console.log("Mayúsculas: " + completo.toUpperCase());
+
+        console.log("Nombre: " + nombre);
+        console.log("Apellido 1: " + apellido1);
+        console.log("Apellido 2: " + apellido2);
+        */
+    </script>
+</body>
+</html>

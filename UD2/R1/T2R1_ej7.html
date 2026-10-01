@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>T2R1_ej7</title>
+</head>
+
+<body>
+    <script>
+        const a = parseFloat(prompt("Introduce el primer número:"));
+        const b = parseFloat(prompt("Introduce el segundo número:"));
+        const c = parseFloat(prompt("Introduce el tercer número:"));
+
+        let mayor = a;
+
+        if (b > mayor) {
+            mayor = b;
+        }
+        if (c > mayor) {
+            mayor = c;
+        }
+
+        document.write("El número mayor es: " + mayor);
+    </script>
+</body>
+
+</html>

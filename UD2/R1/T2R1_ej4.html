@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T2R1_ej4</title>
+</head>
+<body>
+    <script>
+        const inicio = new Date();
+
+        const nombre = prompt("Escribe tu nombre:");
+        const apellido1 = prompt("Escribe tu primer apellido:");
+        const apellido2 = prompt("Escribe tu segundo apellido:");
+
+        const fin = new Date();
+
+        const segundos = Math.round((fin - inicio) / 1000);
+
+        document.write("En introducir " + nombre + " " + apellido1 + " " + apellido2 + " has tardado " + segundos + " segundos.");
+    </script>
+</body>
+</html>

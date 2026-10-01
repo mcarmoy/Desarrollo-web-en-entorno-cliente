@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T2R1_ej10</title>
+</head>
+<body>
+    <script>
+        const frase = prompt("Escribe una frase:").toLowerCase();
+
+        let a = 0;
+        let e = 0;
+        let i = 0;
+        let o = 0;
+        let u = 0;
+
+        for (let pos = 0; pos < frase.length; pos++) {
+            const letra = frase[pos];
+
+            if (letra === "a") {
+                a++;
+            } else if (letra === "e") {
+                e++;
+            } else if (letra === "i") {
+                i++;
+            } else if (letra === "o") {
+                o++;
+            } else if (letra === "u") {
+                u++;
+            }
+        }
+
+        document.write("A: " + a + "<br>");
+        document.write("E: " + e + "<br>");
+        document.write("I: " + i + "<br>");
+        document.write("O: " + o + "<br>");
+        document.write("U: " + u);
+    </script>
+</body>
+</html>

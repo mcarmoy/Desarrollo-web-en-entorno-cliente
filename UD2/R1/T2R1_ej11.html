@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2R1_ej11</title>
+</head>
+<body>
+    <script>
+        let cadena = prompt("Introduzca una cadena: ")
+
+        function invertirCadena(cad) {
+            let caracteres = cad.split("");
+
+            let i = 0;
+            let j = cad.length - 1;
+
+            while (i < j) {
+                let temp = caracteres[i];
+                caracteres[i] = caracteres[j];
+                caracteres[j] = temp;
+
+                i++;
+                j--;
+            }
+            return caracteres;
+        }
+
+        let cadenaInvertida = invertirCadena(cadena);
+
+        for (let index = 0; index < cadenaInvertida.length; index++) {
+            document.write(cadenaInvertida[index]);
+        }
+    </script>
+</body>
+</html>

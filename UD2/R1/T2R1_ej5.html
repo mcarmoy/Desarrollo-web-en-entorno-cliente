@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T2R1_ej5</title>
+</head>
+<body>
+    <script>
+        const opcion = parseInt(prompt("Introduce una opción:\n1. Potencia\n2. Raíz\n3. Redondeo\n4. Trigonometría"));
+
+        switch (opcion) {
+            case 1:
+                const base = parseFloat(prompt("Introduce la base:"));
+                const exponente = parseFloat(prompt("Introduce el exponente:"));
+                document.write("La potencia de " + base + " elevado a " + exponente + " es: " + Math.pow(base, exponente));
+                break;
+            case 2:
+                const numero = parseFloat(prompt("Introduce un número (no negativo):"));
+                if (numero >= 0) {
+                    document.write("La raíz de " + numero + " es: " + Math.sqrt(numero));
+                } else {
+                    document.write("El número no puede ser negativo");
+                }
+                break;
+            case 3:
+                const decimal = parseFloat(prompt("Introduce un número decimal:"));
+                document.write("Redondeo al alza: " + Math.ceil(decimal) + "<br>");
+                document.write("Redondeo a la baja: " + Math.floor(decimal) + "<br>");
+                document.write("Redondeo al entero más próximo: " + Math.round(decimal));
+                break;
+            case 4:
+                const grados = parseFloat(prompt("Introduce un ángulo (entre 0 y 360):"));
+                const radianes = grados * Math.PI / 180;
+                document.write("Seno: " + Math.sin(radianes) + "<br>");
+                document.write("Coseno: " + Math.cos(radianes) + "<br>");
+                document.write("Tangente: " + Math.tan(radianes));
+                break;
+            default:
+                document.write("Opción no válida");
+        }
+    </script>
+</body>
+</html>
