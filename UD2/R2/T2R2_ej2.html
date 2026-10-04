@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2R2_ej2</title>
+</head>
+
+<body>
+    <script>
+        // 1. Función separada que pinta la hora en la consola usando el objeto Date y sus métodos
+        function mostrarHora() {
+            let fecha = new Date();
+
+            let horas = fecha.getHours();
+            let minutos = fecha.getMinutes();
+            let segundos = fecha.getSeconds();
+
+            document.write(horas + ":" + minutos + ":" + segundos + "<br>");
+        }
+
+        // 2. Función separada que arranca el setInterval
+        function iniciarIntervalo() {
+            setInterval(mostrarHora, 1000);
+        }
+
+        // 3. Usamos setTimeout para arrancar todo después de 1 segundo llamando a su función aparte
+        setTimeout(iniciarIntervalo, 1000);
+    </script>
+</body>
+
+</html>

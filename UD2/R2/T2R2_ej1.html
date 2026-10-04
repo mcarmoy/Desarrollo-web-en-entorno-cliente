@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2R2_ej1</title>
+</head>
+
+<body>
+    <script>
+        let segundos = 60;
+        let temporizador;
+
+        // 1. Función separada para el bucle de setInterval
+        function actualizarContador() {
+            document.write(segundos + "<br>");
+
+            if (segundos === 0) {
+                clearInterval(temporizador);
+
+                // Llamamos a la otra función separada dentro del setTimeout
+                setTimeout(mensajeFinal, 500);
+            } else {
+                segundos--;
+            }
+        }
+
+        // 2. Función separada para el setTimeout
+        function mensajeFinal() {
+            document.write("¡Tiempo terminado!");
+        }
+
+        // Ejecutamos el intervalo pasando el nombre de la función
+        temporizador = setInterval(actualizarContador, 1000);
+    </script>
+</body>
+
+</html>
