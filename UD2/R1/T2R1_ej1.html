@@ -8,14 +8,14 @@
 <body>
     <script>
         let hoy = new Date();
-        let anioActual = new hoy.getFullYear();
+        let anioActual = hoy.getFullYear();
 
         let vacaciones = new Date(anioActual, 11, 19);
 
         let diferenciaMs = vacaciones - hoy;
         let diferenciaDias = Math.ceil(diferenciaMs / (1000 * 60 * 60 * 24));
 
-         document.write("Quedan " + diferenciaDias + " días para las vacaciones de Navidad.");
+        document.write("Quedan " + diferenciaDias + " días para las vacaciones de Navidad.");
     </script>
 </body>
 </html>
