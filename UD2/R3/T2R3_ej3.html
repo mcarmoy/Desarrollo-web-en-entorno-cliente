@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="T2R3.js"></script>
+    <title>T2R3_ej3</title>
+</head>
+<body>
+    <script>
+    const texto = prompt("Escribe una cadena:");
+    const buscar = prompt("Escribe la subcadena a buscar:");
+    const resultado = localizaSubcadena(texto, buscar);
+
+    if (resultado === "") {
+        document.write("La subcadena no aparece");
+    } else {
+        document.write("Aparece en las posiciones: " + resultado);
+    }
+</script>
+</body>
+</html>

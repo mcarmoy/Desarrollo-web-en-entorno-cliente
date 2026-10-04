@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="T2R3.js"></script>
+    <title>T2R3_ej6</title>
+</head>
+
+<body>
+    <script>
+        const texto = prompt("Escribe la primera cadena:");
+        const buscar = prompt("Escribe la segunda cadena:");
+        const pos = posicionSubcadena(texto, buscar);
+
+        if (pos === -1) {
+            document.write("La segunda cadena NO es una subcadena de la primera");
+        } else {
+            document.write("Es una subcadena. Primera posición: " + pos);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2R3_ej1</title>
+    <script src="T2R3.js"></script>
+</head>
+<body>
+    <script>
+        const frase = prompt("Escribe una frase:");
+        const n = parseInt(prompt("Escribe un número para filtrar palabras más largas que él:"));
+
+        document.write("Cadena invertida: " + invierteCadena(frase) + "<br>");
+        document.write("Palabras invertidas: " + invierteCadenaPalabras(frase) + "<br>");
+        document.write("Longitud de la palabra más larga: " + encuentraPalabraMasLarga(frase) + "<br>");
+        document.write("Palabras de más de " + n + " letras: " + filtraPalabrasMasLargas(frase, n) + "<br>");
+        document.write("Bien formada: " + cadenaBienFormada(frase));
+    </script>
+</body>
+</html>
