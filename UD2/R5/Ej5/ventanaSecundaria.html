@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ventana secundaria</title>
+</head>
+<body>
+    <!-- Párrafo vacío donde se mostrará el mensaje recibido -->
+    <p id="parrafo"></p>
+
+    <script>
+        // Recibe un texto y lo escribe dentro del párrafo con id "parrafo"
+        function recibeMensaje(texto) {
+            var objeto = document.getElementById("parrafo");
+            objeto.innerHTML = texto;
+        }
+
+        // Cierra la ventana en la que se ejecuta (la secundaria)
+        function cerrarse() {
+            window.close();
+        }
+    </script>
+
+    <!-- Al pulsar, llama a cerrarse() y la ventana se cierra a sí misma -->
+    <button onclick="cerrarse()">cerrar</button>
+</body>
+</html>

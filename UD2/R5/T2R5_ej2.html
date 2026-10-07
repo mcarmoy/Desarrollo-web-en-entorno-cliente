@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2R5_ej2</title>
+</head>
+<body>
+    <button onclick="abrirVentana()">Abrir ventana</button>
+    <button onclick="cerrarSecundaria()">Cerrar ventana secundaria</button>
+
+    <script>
+        let ventana;
+
+        function abrirVentana() {
+            ventana = window.open("", "", "width=400,height=300");
+            ventana.document.write("<h1>Ventana secundaria</h1>");
+            ventana.document.write("<button onclick='window.close()'>Cerrar ventana</button>");
+        }
+
+        function cerrarSecundaria() {
+            if (ventana) {
+                ventana.close();
+            }
+        }
+    </script>
+</body>
+</html>

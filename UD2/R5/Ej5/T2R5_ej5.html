@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T2R5_ej5</title>
+</head>
+<body>
+    <button onclick="abrirVentana()">Abrir ventana secundaria</button>
+    <button onclick="cerrarSecundaria()">Cerrar ventana secundaria</button>
+    <button onclick="enviarMensaje()">Envía un mensaje a la ventana secundaria</button>
+
+    <script>
+        let ventana;
+
+        function abrirVentana() {
+            ventana = window.open("ventanaSecundaria.html", "", "width=400,height=300");
+        }
+
+        function cerrarSecundaria() {
+            if (ventana) {
+                ventana.close();
+            }
+        }
+
+        function enviarMensaje() {
+            if (ventana && !ventana.closed) {
+                ventana.recibeMensaje("Mensaje desde la ventana principal");
+            }
+        }
+    </script>
+</body>
+</html>

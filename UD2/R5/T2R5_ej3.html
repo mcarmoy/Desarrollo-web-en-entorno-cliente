@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2R5_ej3</title>
+</head>
+
+<body>
+    <p onclick="abrir5Ventanas()">Haz clic aquí</p>
+
+    <script>
+        function abrir5Ventanas() {
+            for (let i = 1; i <= 5; i++) {
+                
+                const v = window.open("", "", "width=350,height=350");
+                v.document.write("<h1>ventana " + i + "</h1>");
+                v.document.write("<button onclick='window.close()'>Cerrar</button>");
+            }
+        }
+    </script>
+</body>
+
+</html>

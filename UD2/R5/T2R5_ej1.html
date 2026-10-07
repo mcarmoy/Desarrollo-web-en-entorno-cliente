@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T3_ej1</title>
+</head>
+<body>
+    <button onclick="cerrarVentana()">Cerrar ventana</button>
+
+    <script>
+        const titulo = prompt("Escribe un título para la página:");
+
+        const izquierda = screen.width - 500;
+        const arriba = 0;
+
+        const ventana = window.open("", "", "width=500,height=400,left=" + izquierda + ",top=" + arriba);
+        ventana.document.write("<h1>" + titulo + "</h1>");
+
+        function cerrarVentana() {
+            ventana.close();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2R5_ej4</title>
+</head>
+<body>
+    <p>Hemos cambiado de ubicación esta página. En breves momentos será redireccionado...</p>
+    <h1 id="contador">5</h1>
+
+    <script>
+        let segundos = 5;
+
+        function cuentaAtras() {
+            segundos = segundos - 1;
+            document.getElementById("contador").innerHTML = segundos;
+
+            if (segundos > 0) {
+                setTimeout(cuentaAtras, 1000);
+            } else {
+                window.location.href = "http://www.pccomponentes.com"
+            }
+        }
+
+        setTimeout(cuentaAtras, 1000);
+    </script>
+</body>
+</html>
