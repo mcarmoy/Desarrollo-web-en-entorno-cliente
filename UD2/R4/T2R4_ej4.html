@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T2R4_Ej4</title>
+    <script src="T2R4.js"></script>
+</head>
+<body>
+    <script>
+        let continuar;
+
+        do {
+            const a = parseFloat(prompt("Escribe el primer cateto:"));
+            const b = parseFloat(prompt("Escribe el segundo cateto:"));
+
+            document.write("La hipotenusa mide: " + hipotenusa(a, b) + "<br>");
+
+            continuar = confirm("¿Quieres calcular otra hipotenusa?");
+        } while (continuar);
+    </script>
+</body>
+</html>

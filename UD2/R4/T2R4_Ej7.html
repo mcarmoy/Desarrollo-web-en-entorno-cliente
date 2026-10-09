@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T2R4_Ej7</title>
+    <script src="T2R4.js"></script>
+</head>
+<body>
+    <script>
+        const hasta = parseInt(prompt("¿Hasta qué número quieres la tabla?"));
+
+        document.write("<table border='1'>");
+        document.write("<tr><th>Número</th><th>Seno</th></tr>");
+
+        for (let i = 0; i <= hasta; i++) {
+            document.write("<tr><td>" + i + "</td><td>" + seno(i) + "</td></tr>");
+        }
+
+        document.write("</table>");
+    </script>
+</body>
+</html>
