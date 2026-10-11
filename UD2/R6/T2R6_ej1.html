@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T2R6_ej1</title>
+    <script src="T2R6.js"></script>
+</head>
+<body>
+    <script>
+        document.write("<table border='1'>");
+        document.write("<tr><th>Propiedad</th><th>Valor</th></tr>");
+
+        // navigator
+        fila("navigator.appName", navigator.appName);
+        fila("navigator.appVersion", navigator.appVersion);
+        fila("navigator.userAgent", navigator.userAgent);
+        fila("navigator.platform", navigator.platform);
+        fila("navigator.language", navigator.language);
+        fila("navigator.onLine", navigator.onLine);
+        fila("navigator.cookieEnabled", navigator.cookieEnabled);
+
+        // screen
+        fila("screen.width", screen.width);
+        fila("screen.height", screen.height);
+        fila("screen.availWidth", screen.availWidth);
+        fila("screen.availHeight", screen.availHeight);
+        fila("screen.colorDepth", screen.colorDepth);
+
+        // window
+        fila("window.innerWidth", window.innerWidth);
+        fila("window.innerHeight", window.innerHeight);
+        fila("window.outerWidth", window.outerWidth);
+        fila("window.outerHeight", window.outerHeight);
+
+        // location
+        fila("location.href", location.href);
+        fila("location.protocol", location.protocol);
+        fila("location.hostname", location.hostname);
+
+        document.write("</table>");
+    </script>
+</body>
+</html>

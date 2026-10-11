@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T2R6_ej6</title>
+    <script src="T2R6.js"></script>
+</head>
+<body>
+    <!-- Anclas de ejemplo (con name, sin href) -->
+    <a name="ancla1">Primera ancla</a><br>
+    <a name="ancla2">Segunda ancla</a><br>
+    <a name="ancla3">Tercera ancla</a>
+
+    <!-- Enlaces de ejemplo -->
+    <p>
+        <a href="https://www.google.com">Google</a> |
+        <a href="https://www.wikipedia.org">Wikipedia</a>
+    </p>
+
+    <!-- Imágenes de ejemplo -->
+    <img id="imagen1" src="imagenes/imagen1.jpg" alt="Imagen 1" width="100">
+    <img id="imagen2" src="imagenes/imagen2.jpg" alt="Imagen 2" width="100">
+
+    <hr>
+
+    <!-- Enlaces que realizan los apartados -->
+    <p><a href="#" onclick="numeroAnclas(); return false;">a) Número de anclas</a></p>
+    <p><a href="#" onclick="textoPrimerAncla(); return false;">b) Texto del primer ancla</a></p>
+    <p><a href="#" onclick="numeroImagenes(); return false;">c) Número de imágenes</a></p>
+    <p><a href="#" onclick="idPrimeraImagen(); return false;">d) id de la primera imagen</a></p>
+    <p><a href="#" onclick="numeroEnlaces(); return false;">e) Número de enlaces</a></p>
+    <p><a href="#" onclick="cambiarTitulo(); return false;">f) Cambiar el título</a></p>
+</body>
+</html>

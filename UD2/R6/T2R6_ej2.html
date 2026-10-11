@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2R6_ej2</title>
+    <script src="T2R6.js"></script>
+</head>
+<body>
+    <script>
+        document.write("<table border='1'>");
+        document.write("<tr><th>Propiedad</th><th>Valor</th></tr>");
+
+        fila("screen.width", screen.width);
+        fila("screen.height", screen.height);
+        fila("screen.availWidth", screen.availWidth);
+        fila("screen.availHeight", screen.availHeight);
+        fila("screen.colorDepth", screen.colorDepth);
+        fila("screen.pixelDepth", screen.pixelDepth);
+        fila("screen.orientation.type", screen.orientation.type);
+        fila("window.devicePixelRatio", window.devicePixelRatio);
+
+        document.write("</table>");
+    </script>
+</body>
+</html>
