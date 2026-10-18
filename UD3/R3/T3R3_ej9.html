@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T3R3_ej9</title>
+    <script src="T3R3.js"></script>
+</head>
+<body>
+    <script>
+        const resultado = simulaDosDadosCombinaciones(36000);
+        const sumas = resultado[0];
+        const combinaciones = resultado[1];
+
+        // Tabla de sumas (ejercicio anterior)
+        document.write("<h3>Veces que ha salido cada suma</h3>");
+        document.write("<table border='1'>");
+        document.write("<tr><th>Suma</th><th>Veces</th></tr>");
+
+        for (let suma = 2; suma <= 12; suma++) {
+            document.write("<tr><td>" + suma + "</td><td>" + sumas[suma] + "</td></tr>");
+        }
+
+        document.write("</table>");
+
+        // Tabla bidimensional de combinaciones
+        document.write("<h3>Veces que ha salido cada combinación</h3>");
+        document.write("<table border='1'>");
+        document.write("<tr><th>Dado 1 \\ Dado 2</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>");
+
+        for (let i = 0; i < 6; i++) {
+            document.write("<tr><th>" + (i + 1) + "</th>");
+            for (let j = 0; j < 6; j++) {
+                document.write("<td>" + combinaciones[i][j] + "</td>");
+            }
+            document.write("</tr>");
+        }
+
+        document.write("</table>");
+    </script>
+</body>
+</html>

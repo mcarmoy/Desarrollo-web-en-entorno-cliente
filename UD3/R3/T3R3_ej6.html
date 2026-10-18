@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T3R3_ej6</title>
+    <script src="T3R3.js"></script>
+</head>
+<body>
+    <script>
+        let continuar;
+
+        do {
+            const nombre = prompt("Nombre del vendedor:");
+            const venta = parseFloat(prompt("Ventas brutas de la semana de " + nombre + " ($):"));
+
+            altaVendedor(nombre, venta);
+
+            continuar = confirm("¿Quieres dar de alta a otro vendedor?");
+        } while (continuar);
+
+        document.write("<table border='1'>");
+        document.write("<tr><th>Vendedor</th><th>Ventas</th><th>Sueldo</th></tr>");
+
+        for (let i = 0; i < vendedores.length; i++) {
+            document.write("<tr><td>" + vendedores[i] + "</td><td>$ " + ventas[i] + "</td><td>$ " + sueldo(ventas[i]) + "</td></tr>");
+        }
+
+        document.write("</table>");
+    </script>
+</body>
+</html>

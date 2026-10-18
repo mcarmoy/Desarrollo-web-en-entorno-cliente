@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T3R3_ej2</title>
+    <script src="T3R3.js"></script>
+</head>
+<body>
+    <script>
+        const estudiante = parseInt(prompt("Número de estudiante (0 a 4):"));
+        const t = prompt("Trimestre (1, 2 o 3). Déjalo vacío para la media:");
+
+        if (t === "") {
+            document.write("Nota media: " + nota(estudiante));
+        } else {
+            document.write("Nota del trimestre " + t + ": " + nota(estudiante, parseInt(t)));
+        }
+    </script>
+</body>
+</html>

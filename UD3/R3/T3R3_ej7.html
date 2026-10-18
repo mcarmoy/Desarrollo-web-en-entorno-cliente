@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>T3R3_ej7</title>
+    <script src="T3R3.js"></script>
+</head>
+
+<body>
+    <script>
+        const array = [7, "Migue", "Hola", 9];
+
+        document.write("Array Normal:<br>")
+        array.forEach((elemento, i) => {
+            document.write(elemento);
+
+            if (i < array.length - 1) {
+                document.write(", ");
+            }
+        });
+
+        document.write("<br>");
+
+        poneACero(array);
+        document.write("Tras ponerlo a cero:<br>");
+        muestraArray(array);
+
+        sumaUno(array);
+        document.write("Tras sumar 1 a cada elemento:<br>");
+        muestraArray(array);
+
+        sumaUno(array);
+        document.write("Tras sumar 1 otra vez:<br>");
+        muestraArray(array);
+    </script>
+</body>
+
+</html>

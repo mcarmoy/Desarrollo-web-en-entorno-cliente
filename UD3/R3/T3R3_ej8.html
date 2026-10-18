@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T3R3_ej8</title>
+    <script src="T3R3.js"></script>
+</head>
+<body>
+    <script>
+        const resultado = simulaDosDados(36000);
+
+        document.write("<table border='1'>");
+        document.write("<tr><th>Suma</th><th>Veces</th></tr>");
+
+        for (let suma = 2; suma <= 12; suma++) {
+            document.write("<tr><td>" + suma + "</td><td>" + resultado[suma] + "</td></tr>");
+        }
+
+        document.write("</table>");
+    </script>
+</body>
+</html>

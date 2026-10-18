@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T3R3_ej11</title>
+    <script src="T3R3.js"></script>
+</head>
+<body>
+    <script>
+        const matrizVentas = creaMatrizVentas();
+        let continuar;
+
+        do {
+            const vendedor = parseInt(prompt("Número de vendedor (1 a 4):"));
+            const producto = parseInt(prompt("Número de producto (1 a 5):"));
+            const valor = parseFloat(prompt("Valor total vendido:"));
+
+            if (vendedor >= 1 && vendedor <= 4 && producto >= 1 && producto <= 5 && !isNaN(valor)) {
+                registraVenta(matrizVentas, vendedor, producto, valor);
+            } else {
+                alert("Datos no válidos, esta hoja no se ha registrado");
+            }
+
+            continuar = confirm("¿Quieres introducir otra hoja de ventas?");
+        } while (continuar);
+
+        muestraTablaVentas(matrizVentas);
+    </script>
+</body>
+</html>

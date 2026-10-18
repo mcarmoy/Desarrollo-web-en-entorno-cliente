@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3R3_ej1</title>
+    <script src="T3R3.js"></script>
+</head>
+<body>
+    <script>
+        document.write("<table border='1'>");
+        document.write("<tr><th>Nombre</th><th>Edad</th><th>1er trimestre</th><th>2º trimestre</th><th>3er trimestre</th></tr>");
+
+        for (let i = 0; i < clase.length; i++) {
+            const campos = clase[i].split(",");
+            document.write("<tr>");
+            for (let j = 0; j < campos.length; j++) {
+                document.write("<td>" + campos[j].trim() + "</td>");
+            }
+            document.write("</tr>");
+        }
+
+        document.write("</table>");
+    </script>
+</body>
+</html>
