@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T3R2_ej1</title>
+</head>
+<body>
+    <script>
+        const numeros = [];
+
+        for (let i = 1; i <= 5; i++) {
+            numeros.push(parseFloat(prompt("Escribe el número " + i + ":")));
+        }
+
+        let minimo = numeros[0];
+        let maximo = numeros[0];
+        let suma = 0;
+
+        for (let i = 0; i < numeros.length; i++) {
+            if (numeros[i] < minimo) {
+                minimo = numeros[i];
+            }
+            if (numeros[i] > maximo) {
+                maximo = numeros[i];
+            }
+            suma += numeros[i];
+        }
+
+        const medio = suma / numeros.length;
+
+        document.write("Números: " + numeros.join(", ") + "<br>");
+        document.write("Valor mínimo: " + minimo + "<br>");
+        document.write("Valor máximo: " + maximo + "<br>");
+        document.write("Valor medio: " + medio);
+    </script>
+</body>
+</html>

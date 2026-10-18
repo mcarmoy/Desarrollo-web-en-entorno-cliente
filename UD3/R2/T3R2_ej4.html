@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T3R2_ej4</title>
+    <script src="T3R2.js"></script>
+</head>
+<body>
+    <script>
+        const array1 = ["casa", "perro", "mesa", "sol", "libro"];
+        const array2 = ["gato", "mesa", "luna", "sol", "coche"];
+
+        document.write("Array 1: " + array1.join(", ") + "<br>");
+        document.write("Array 2: " + array2.join(", ") + "<br><br>");
+        document.write("Intersección: " + interseccion(array1, array2).join(", ") + "<br>");
+        document.write("Unión: " + union(array1, array2).join(", ") + "<br>");
+        document.write("Diferencia (array1 - array2): " + diferencia(array1, array2).join(", "));
+    </script>
+</body>
+</html>

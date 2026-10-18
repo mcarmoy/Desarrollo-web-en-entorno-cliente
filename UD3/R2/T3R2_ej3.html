@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T3R2_ej3</title>
+</head>
+<body>
+    <script>
+        const n = parseInt(prompt("Escribe el valor máximo N:"));
+        const numeros = [];
+
+        for (let i = 0; i < 20; i++) {
+            numeros.push(Math.floor(Math.random() * n) + 1);
+        }
+
+        document.write("Números generados entre 1 y " + n + ":<br>");
+        document.write(numeros.join(", "));
+    </script>
+</body>
+</html>

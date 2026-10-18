@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>T3R2_ej9</title>
+    <script src="T3R2.js"></script>
+</head>
+<body>
+    <script>
+        const texto = prompt("Escribe una cadena de texto:");
+
+        if (texto !== null && texto.trim() !== "") {
+            const palabras = separaPalabras(texto);
+            const azArray = burbuja(palabras);
+            const zaArray = invierteArray(azArray);
+
+            const ventana = window.open("", "", "width=500,height=400");
+
+            ventana.document.write("<h2>Información de la cadena</h2>");
+            ventana.document.write("Número de palabras: " + palabras.length + "<br>");
+            ventana.document.write("Primera palabra: " + palabras[0] + "<br>");
+            ventana.document.write("Última palabra: " + palabras[palabras.length - 1] + "<br>");
+            ventana.document.write("Orden inverso: " + invierteArray(palabras).join(" ") + "<br>");
+            ventana.document.write("De la A a la Z: " + azArray.join(" ") + "<br>");
+            ventana.document.write("De la Z a la A: " + zaArray.join(" "));
+        }
+    </script>
+</body>
+</html>
