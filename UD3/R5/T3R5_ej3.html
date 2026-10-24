@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>T3R5_ej3</title>
+</head>
+
+<body>
+    <script>
+        const mapa = [
+            [34, 21, 32, 41, 25],
+            [14, 42, 43, 14, 31],
+            [54, 45, 52, 42, 23],
+            [33, 15, 51, 31, 35],
+            [21, 52, 33, 13, 23]
+        ];
+
+        let fila = 1;
+        let columna = 1;
+        let encontrado = false;
+        let pasos = 0;
+
+        document.write("<b>Celdas visitadas:</b><br>");
+
+        while (!encontrado && pasos < 25) {
+            // Se resta 1 porque las coordenadas empiezan en 1 y el array en 0
+            const valor = mapa[fila - 1][columna - 1];
+            pasos++;
+
+            document.write("Celda (" + fila + "," + columna + ") → pista " + valor + "<br>");
+
+            if (valor === fila * 10 + columna) {
+                encontrado = true;
+            } else {
+                fila = Math.floor(valor / 10);
+                columna = valor % 10;
+            }
+        }
+
+        if (encontrado) {
+            document.write("<br><b>¡Tesoro encontrado en la celda (" + fila + "," + columna + ")!</b>");
+        } else {
+            document.write("<br><b>No se ha encontrado el tesoro.</b>");
+        }
+    </script>
+</body>
+
+</html>

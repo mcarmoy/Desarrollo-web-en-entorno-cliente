@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>T3R5_ej6</title>
+</head>
+
+<body>
+    <script>
+        const mensaje = prompt("Escribe el mensaje a codificar:");
+
+        if (mensaje === null || mensaje.trim() === "") {
+            document.write("No has escrito ningún mensaje.");
+        } else {
+            // 1. Quitar los espacios
+            let texto = "";
+            for (let i = 0; i < mensaje.length; i++) {
+                if (mensaje[i] !== " ") {
+                    texto += mensaje[i];
+                }
+            }
+
+            // 2. Calcular el rectángulo
+            const n = texto.length;
+            const columnas = Math.ceil(Math.sqrt(n));
+            const filas = Math.ceil(n / columnas);
+
+            document.write("Caracteres: " + n + " → " + filas + " filas y " + columnas + " columnas<br><br>");
+
+            // 3. Escribir el texto en el rectángulo, fila a fila
+            document.write("<b>Rectángulo:</b><br>");
+            for (let f = 0; f < filas; f++) {
+                document.write(texto.slice(f * columnas, (f + 1) * columnas) + "<br>");
+            }
+
+            // 4. Leer por columnas, de izquierda a derecha
+            let codificado = "";
+            for (let c = 0; c < columnas; c++) {
+                for (let f = 0; f < filas; f++) {
+                    const posicion = f * columnas + c;
+                    if (posicion < n) {
+                        codificado += texto[posicion];
+                    }
+                }
+                codificado += " ";
+            }
+
+            document.write("<br><b>Mensaje codificado:</b><br>" + codificado.trim());
+        }
+    </script>
+</body>
+
+</html>

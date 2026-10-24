@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3R5_ej1</title>
+</head>
+
+<body>
+    <script>
+        const numeros = [4, 9, 12, 7, 18, 3, 6, 21];
+        const palabras = ["this", "is", "a", "fantastic", "test", "history", "javascript"];
+
+        document.write("Números: " + numeros.join(", ") + "<br>");
+        document.write("Palabras: " + palabras.join(", ") + "<br><br>");
+
+        // 1. Número más grande
+        const mayor = numeros.reduce((max, n) => (n > max ? n : max));
+        document.write("Número más grande: " + mayor + "<br>");
+
+        // 2. Cadena más larga
+        const masLarga = palabras.reduce((larga, p) => (p.length > larga.length ? p : larga));
+        document.write("Cadena más larga: " + masLarga + "<br>");
+
+        // 3. Números pares
+        const pares = numeros.filter(n => n % 2 === 0);
+        document.write("Números pares: " + pares.join(", ") + "<br>");
+
+        // 4. Números impares
+        const impares = numeros.filter(n => n % 2 !== 0);
+        document.write("Números impares: " + impares.join(", ") + "<br>");
+
+        // 5. Palabras que contienen 'is'
+        const conIs = palabras.filter(p => p.includes("is"));
+        document.write("Palabras con 'is': " + conIs.join(", ") + "<br>");
+
+        // 6. Todos los números divisibles por 3
+        const todosDivisibles = numeros.every(n => n % 3 === 0);
+        document.write("¿Todos divisibles por 3?: " + todosDivisibles + "<br>");
+        const multiplosDeTres = [3, 6, 9, 12];
+        document.write("¿[3, 6, 9, 12] divisibles por 3?: " + multiplosDeTres.every(n => n % 3 === 0) + "<br>");
+
+        // 7. Zip de dos arrays
+        const letras = ["a", "b", "c", "d"];
+        const numerosZip = [1, 2, 3, 4];
+        const zip = letras.map((letra, i) => letra + numerosZip[i]);
+        document.write("Zip: " + zip.join(", ") + "<br>");
+
+        // 8. Unir dos arrays y ordenar de menor a mayor
+        const unidos = [8, 3, 10].concat([5, 1, 7]);
+        unidos.sort((a, b) => a - b);
+        document.write("Unidos y ordenados: " + unidos.join(", ") + "<br>");
+
+        // 9. Quitar la primera palabra
+        const copia1 = palabras.slice();
+        copia1.shift();
+        document.write("Sin la primera palabra: " + copia1.join(", ") + "<br>");
+
+        // 10. Poner una palabra nueva al principio
+        const copia2 = palabras.slice();
+        copia2.unshift("hello");
+        document.write("Con palabra nueva al inicio: " + copia2.join(", ") + "<br>");
+
+        // 11. Reemplazar elementos
+        const copia3 = palabras.slice();
+        copia3.splice(1, 2, "was", "an");
+        document.write("Reemplazados: " + copia3.join(", ") + "<br>");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>T3R5_ej5</title>
+</head>
+
+<body>
+    <script>
+        const matriz = [
+            [3, 8, 2, 9, 5],
+            [7, 6, 4, 8, 1],
+            [9, 7, 5, 9, 6],
+            [2, 8, 1, 7, 4],
+            [6, 9, 3, 8, 7]
+        ];
+
+        document.write("<b>Matriz:</b><br>");
+        document.write("<table border='1'>");
+        matriz.forEach(fila => {
+            document.write("<tr>" + fila.map(n => "<td>" + n + "</td>").join("") + "</tr>");
+        });
+        document.write("</table><br>");
+
+        let encontrados = 0;
+
+        for (let f = 0; f < 5; f++) {
+            for (let c = 0; c < 5; c++) {
+                const valor = matriz[f][c];
+
+                // Mayor o igual que todos los de su fila
+                const maxFila = matriz[f].every(n => valor >= n);
+
+                // Menor o igual que todos los de su columna
+                const minColumna = matriz.every(fila => valor <= fila[c]);
+
+                if (maxFila && minColumna) {
+                    document.write("Punto de silla en (" + (f + 1) + "," + (c + 1) + ") con valor " + valor + "<br>");
+                    encontrados++;
+                }
+            }
+        }
+
+        if (encontrados === 0) {
+            document.write("No saddle points");
+        }
+    </script>
+</body>
+
+</html>

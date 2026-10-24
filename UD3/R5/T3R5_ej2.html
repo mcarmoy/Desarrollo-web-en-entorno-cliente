@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3R5_ej2</title>
+</head>
+
+<body>
+    <script>
+        const nombres = [
+            "Juan Garcia",
+            "Marta Lopez",
+            "Jose Perez",
+            "Ana Ruiz",
+            "Javier Gil",
+            "Julia Alonso",
+            "Pedro Sanz",
+            "Jorge Diaz"
+        ];
+
+        document.write("Nombres: " + nombres.join(", ") + "<br><br>");
+
+        // 1. Filtrar los que empiezan por J
+        const conJ = nombres.filter(n => n.startsWith("J"));
+        document.write("Empiezan por J: " + conJ.join(", ") + "<br>");
+
+        // 2. Proyección: quedarnos solo con las iniciales
+        const iniciales = conJ.map(n => n.split(" ").map(p => p[0]).join(""));
+        document.write("Iniciales: " + iniciales.join(", ") + "<br>");
+
+        // 3. Ordenar alfabéticamente
+        const ordenadas = iniciales.sort();
+        document.write("Ordenadas: " + ordenadas.join(", ") + "<br>");
+    </script>
+</body>
+
+</html>
