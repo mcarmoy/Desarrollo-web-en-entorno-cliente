@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tarjeta {
+    background-color: white;
+    width: 260px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.tarjeta h2 {
+    font-size: 16px;
+    color: #222;
+}
+
+.tarjeta img {
+    height: 180px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.precio {
+    font-size: 20px;
+    font-weight: bold;
+    color: #c0392b;
+}
+
+.descripcion {
+    font-size: 13px;
+    color: #555;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.categoria {
+    font-style: italic;
+    color: #888;
+}
+
+.valoracion {
+    color: #e67e22;
+    font-weight: bold;
+}
